@@ -1,0 +1,24 @@
+title: "Entre Diálogos"
+description: "Consultas de psicologia online e presenciais no Montijo. Aceitação, Ansiedade, Relacionamentos. Cédula OPP 29538"
+images: 
+  - "images/home/hero/bill-sitting.png"
+
+# logo: "images/shared/logo.png"
+
+favicons:
+  themeColor: "#FFFFFF"
+  backgroundColor: "#FFFFFF"
+  faviconColor: "#000000"
+
+contact:
+  - "geral@entredialogos.com"
+#  - "207.555.0119"
+
+social:
+#  dribbble: "#"
+  instagram: "https://www.instagram.com/filipatavares_psicologa/"
+#  facebook: "#"
+#  twitter: "#"
+
+copyright: "© 2026 Entre diálogos - Filipa Tavares All Rights Reserved"
+

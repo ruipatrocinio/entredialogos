@@ -1,0 +1,26 @@
+enable: true
+
+contact:
+  title: "Contactos"
+  items:
+    - label: "Marca consulta"
+      link: "#"
+
+#    - label: "+908 89097 890"
+#      link: ""
+
+social:
+  # - title: "Facebook"
+  #   icon: "fa-brands fa-facebook"
+  #   link: "#"
+  # - title: "Twitter"
+  #   icon: "fa-brands fa-twitter"
+  #   link: "#"
+  - title: "Instagram"
+    icon: "fa-brands fa-instagram"
+    link: "https://www.instagram.com/filipatavares_psicologa/"
+#  - title: "LinkedIn"
+#    icon: "fa-brands fa-linkedin"
+#    link: "#"
+
+copyright: "Copyright ® 2026 Entre Diálogos All rights Reserved"

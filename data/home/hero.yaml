@@ -1,0 +1,35 @@
+enable: true
+
+title: "Filipa Távares"
+text: "Psicóloga Clínica de adultos, crianças e jovens. Vamos dar voz ao que sentes?"
+
+buttons:
+  - label: "Marcar Consulta"
+    link: "https://linktr.ee/filipatavares_psicologa#518994447"
+
+#  - label: "View More"
+#    link: ""
+
+#image: "images/home/hero/bill-sitting.png"
+
+# items:
+#   - icon: "fas fa-user"
+#     color: "#4628A4"
+#     title: "Web Application"
+#     text: "Lorem ipsum lorem lorem"
+
+#   - icon: "fas fa-user"
+#     color: "#5FC300"
+#     title: "SEO"
+#     text: "Lorem ipsum lorem lorem"
+
+#   - icon: "fas fa-user"
+#     color: "#00329B"
+#     title: "AR/VR Solutions"
+#     text: "Lorem ipsum lorem lorem"
+
+#   - icon: "fas fa-user"
+#     color: "#BB3800"
+#     title: "Mobile Applications"
+#     text: "Lorem ipsum lorem lorem"
+

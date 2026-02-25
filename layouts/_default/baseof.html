@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  {{- partial "head.html" . -}} 
+  <body
+    class="d-flex flex-column min-vh-100 background-image"
+    {{ with resources.GetMatch "img/background.*" }}
+    style="background-image: url('{{.RelPermalink}}')"
+    {{ end }}
+  >
+    {{- partial "header.html" . -}}
+
+    <main id="content" class="flex-fill">
+      <div class="container py-3 py-lg-5">
+          {{- block "main" .}} {{- end }}
+      </div>
+    </main>
+
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

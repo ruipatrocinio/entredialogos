@@ -2,3 +2,4 @@
 resources/
 public/
 .prettierrc
+node_modules/

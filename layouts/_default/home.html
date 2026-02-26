@@ -12,31 +12,19 @@
 
   <div class="col-lg-8">
     <div class="text-center text-lg-start">
-      <div class="badge mb-4"></div>
-      <div class="fs-3 fw-light text-muted">
-        {{ .Site.Params.homepage.preTitle }}
-      </div>
-      <h1 class="display-9 fw-bolder">
+      <h2 class="display-9 fw-bolder text-primary">
         <span class="d-inline">{{ .Site.Params.homepage.title }} </span>
-      </h1>
-      <p class="text-justify text-lg-start">
-        {{ .Site.Params.homepage.intro | markdownify}}
-      </p>
+      </h2>
+      <p class="text-justify text-lg-start lead">Olá! Seja muito bem-vindo(a)!</p>
+      <p class="text-justify text-lg-start lead">Chamo-me Filipa Tavares e sou Psicóloga Clínica e da saúde.</p>
+      <p class="text-justify text-lg-start lead">Cédula OPP 29538.</p>
     </div>
-    <div
-      class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mt-3 mt-lg-5"
-    >
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mt-3 mt-lg-5">
       <!-- button -->
       <a
         class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder shadow-sm"
         href="{{ .Site.Params.homepage.mainButtonRef }}"
-        >{{ .Site.Params.homepage.mainButton }}</a
-      >
-      <a
-        class="btn btn-secondary btn-lg px-5 py-3 fs-6 fw-bolder shadow-sm"
-        href="{{ .Site.Params.homepage.secondButtonRef }}"
-        >{{ .Site.Params.homepage.secondButton }}</a
-      >
+        >{{ .Site.Params.homepage.mainButton }}</a>
     </div>
   </div>
   <br />
@@ -45,7 +33,37 @@
 </div>
 
 <!-- Description -->
+<section class="quote-banner text-black py-2 mb-5 shadow-sm" style="background-color: #e0dedc">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h5 class="fw-light mb-1 italic-quote">
+          "Eu não sou o que me aconteceu. Eu sou o que me escolho tornar-me."
+        </h5>
+        <p class="small opacity-75 mb-0">— Carl Jung</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-lg-8">
+    <p class="mb-4 text-muted lead">
+      Desde pequena, sempre senti uma vontade genuína de ajudar os outros.
+      
+      Acredito que esse desejo de apoiar e compreender as pessoas foi o que me guiou para a Psicologia, algo que sempre senti como o meu destino.
+      
+      A verdade é que sempre acreditei que as nossas experiências, por mais desafiantes que sejam, têm o potencial de nos transformar e de nos aproximar de quem realmente somos.
+      
+      Esta crença reflete-se não só na forma como me relaciono com os pacientes, mas também na maneira como encaro os meus próprios desafios.
+    </p>
+  </div>
+</section>
+
+
 <div class="mt-5 align-items-center">{{ .Content }}</div>
+
+
 <!--  -->
 
 <!-- latest posts -->

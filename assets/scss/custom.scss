@@ -1,1 +1,19 @@
 /* HERE YOU CAN ADD YOUR CUSTOM CSS/SCSS (not everything will be overwritable due to bootstrap and its use of !important) */
+.quote-banner {
+    /* Subtle texture so it doesn't look flat */
+    background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0));
+}
+
+.italic-quote {
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    line-height: 1.2; /* Tighter line height for the quote */
+}
+
+/* Removes the border on mobile so it doesn't look weird when stacked */
+@media (max-width: 767.98px) {
+    .border-md-end {
+        border: none !important;
+    }
+}
+

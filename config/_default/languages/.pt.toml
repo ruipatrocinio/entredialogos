@@ -18,14 +18,12 @@ contentDir = "content/pt"
     title = "Filipa Tavares"
     # You can use some markdown safely here as long as you don't include line breaks
     intro= """
-### Vamos dar voz ao que sentes?
+#### Vamos dar voz ao que sentes?
 ___
 
-**Psicóloga Clínica de adultos, crianças e jovens.**
+Olá! Seja muito bem-vindo(a)!
 
-Consultas de psicologia online e presenciais no Montijo.
-
-Aceitação, Ansiedade, Relacionamentos.
+Chamo-me Filipa Tavares e sou *Psicóloga Clínica e da saúde*. 
 
 Cédula OPP 29538.
         """
@@ -45,7 +43,7 @@ Cédula OPP 29538.
  mapLink = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382266.44569392945!2d-76.55832397784323!3d41.53770983690751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4d93a77484bbb%3A0xfff27920ab9bfae8!2sScranton%2C%20Pennsylvania%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1716459350324!5m2!1sit!2sit" # google maps "embed" link here
 
 [params.contacts]
-  title = "Marcar consulta"
+  title = "Vamos dar voz ao que sentes?"
   formCallToAction = "Marcação de consulta online e presencial (Montijo)"
   socialCallToAction = "Segue-me" # These are the same as in [params.social]
   [params.contacts.form]

@@ -10,7 +10,7 @@
       {{/* Mobile CTA visible outside the collapsed menu */}}
       {{ range .Site.Menus.main }}
         {{ if eq .Name "Marcar consulta" }}
-          <a class="btn btn-primary btn-cta d-lg-none ms-2" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="btn btn-primary btn-sm d-lg-none ms-2" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
       {{ end }}
       <button

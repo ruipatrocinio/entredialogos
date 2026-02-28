@@ -1,0 +1,40 @@
+/* Compact header styles: reduce vertical height, font sizes and provide shrink state */
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: padding 0.18s ease, font-size 0.18s ease;
+}
+
+.navbar .navbar-brand .fw-bolder {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.navbar .navbar-brand .subtitle {
+  font-size: 0.85rem;
+  color: #6c757d; /* keep muted tone */
+}
+
+.navbar.shrink {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar.shrink .navbar-brand .fw-bolder {
+  font-size: 0.95rem;
+}
+
+/* Make subtitle hidden on smaller viewports */
+@media (max-width: 991.98px) {
+  .navbar .navbar-brand .subtitle { display: none !important; }
+}
+
+/* Slightly lighter nav links to reduce visual height */
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+/* CTA button spacing */
+.navbar .btn-cta {
+  margin-left: 0.5rem;
+}

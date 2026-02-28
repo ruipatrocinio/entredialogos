@@ -1,5 +1,6 @@
 /* HERE YOU CAN ADD YOUR CUSTOM CSS/SCSS (not everything will be overwritable due to bootstrap and its use of !important) */
 @import 'header-compact';
+@import 'footer-compact';
 .quote-banner {
     /* Subtle texture so it doesn't look flat */
     background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0));

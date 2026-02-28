@@ -1,0 +1,21 @@
+/* compact footer style, inline social icons and minimal spacing */
+.footer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.footer .social-icons a {
+  margin-left: 0.5rem;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+.footer .social-icons a:hover {
+  color: #343a40;
+}
+
+@media (max-width: 767.98px) {
+  .footer .nav-links {
+    margin-top: 0.5rem;
+  }
+}

@@ -55,7 +55,8 @@ Name: ${form_name} ${form_lastname}\nEmail: ${form_email}\nPhone: ${form_phone}\
     }
 
     // redirect to thanks page
-    return Response.redirect('/thanks', 302);
+    const redirectUrl = new URL('/thanks', request.url).toString();
+    return Response.redirect(redirectUrl, 302);
   } catch (err) {
     return new Response(`Error sending email: ${err.message}`, { status: 500 });
   }

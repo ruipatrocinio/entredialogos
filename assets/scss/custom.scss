@@ -19,3 +19,95 @@
     }
 }
 
+/* Layout Base */
+    .insta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Garantir que o link ocupa o espaço todo mas mantém o fluxo vertical */
+    .insta-link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        height: 100%;
+    }
+
+    .insta-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #eaeaea;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Contentor da Imagem */
+    .insta-img-wrapper {
+        width: 100%;
+        /* Proporção 1:1 (Quadrada). Se preferir 4:5 (mais alta), use 4 / 5 */
+        aspect-ratio: 1 / 1; 
+        background-color: #fafafa; /* Fundo neutro caso a imagem não cubra tudo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .insta-img-wrapper img {
+        /* MUDANÇA CHAVE: Usamos max-width/max-height e contain */
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain; /* Garante que a imagem inteira apareça dentro do quadrado */
+        display: block;
+    }
+
+    /* Conteúdo sempre por baixo */
+    .insta-content {
+        padding: 16px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .insta-text {
+        font-size: 0.9rem;
+        color: #444;
+        margin: 0 0 12px 0;
+        line-height: 1.4;
+    }
+
+    .cta-link {
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #a18a7a;
+        text-transform: uppercase;
+        margin-top: auto; /* Empurra o link para o fundo do cartão */
+    }
+
+    /* --- RESPONSIVIDADE --- */
+
+    @media (max-width: 900px) {
+        .insta-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .insta-grid {
+            grid-template-columns: 1fr; /* Uma coluna no telemóvel */
+        }
+
+        .insta-img-wrapper {
+            height: 280px; /* Ajuste para não ficar demasiado "achatado" no telemóvel */
+        }
+
+        .insta-content {
+            position: relative; /* Garante que não flutua sobre a imagem */
+            top: 0;
+        }
+    }

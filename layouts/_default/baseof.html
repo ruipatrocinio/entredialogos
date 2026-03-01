@@ -4,7 +4,7 @@
   <body
     class="d-flex flex-column min-vh-100 background-image"
     {{ with resources.GetMatch "img/background.*" }}
-    style="background-image: url('{{.RelPermalink}}')"
+    style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('{{.RelPermalink}}')"
     {{ end }}
   >
     {{- partial "header.html" . -}}

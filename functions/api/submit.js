@@ -15,6 +15,12 @@ export async function onRequest(context) {
   const formData = await request.text();
   const params = new URLSearchParams(formData);
 
+  // honeypot spam filter: if a value is filled, bail out quietly
+  const honey = params.get('_honey');
+  if (honey && honey.trim() !== '') {
+    return new Response('OK', { status: 200 });
+  }
+
   const form_name = params.get('name') || '';
   const form_lastname = params.get('surname') || '';
   const form_email = params.get('email') || '';

@@ -13,6 +13,7 @@
         <div class="card mx-auto p-1 p-md-4 bg-light shadow-sm border-0">
           <div class="card-body bg-light">
             <form id="contact-form" role="form" action="{{ .Site.Params.contacts.form.formspreeLink}}" method="POST">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6 mb-3">

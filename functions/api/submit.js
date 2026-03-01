@@ -15,12 +15,12 @@ export async function onRequest(context) {
   const formData = await request.text();
   const params = new URLSearchParams(formData);
 
-  const form_name = params.get('form_name') || '';
-  const form_lastname = params.get('form_lastname') || '';
-  const form_email = params.get('form_email') || '';
-  const form_phone = params.get('form_phone') || '';
-  const form_message = params.get('form_message') || '';
-  const form_check_input = params.get('form-check-input') || '';
+  const form_name = params.get('name') || '';
+  const form_lastname = params.get('surname') || '';
+  const form_email = params.get('email') || '';
+  const form_phone = params.get('phone-number') || '';
+  const form_message = params.get('message') || '';
+  const form_check_input = params.get('consent') || '';
 
   // Build email payload
   const toEmail = env.TO_EMAIL;
@@ -31,7 +31,7 @@ export async function onRequest(context) {
     return new Response('Server misconfiguration', { status: 500 });
   }
 
-  const emailBody = `New contact form submission:\n
+  const emailBody = `Novo pedido de consulta:\n
 Name: ${form_name} ${form_lastname}\nEmail: ${form_email}\nPhone: ${form_phone}\nChecked: ${form_check_input}\nMessage:\n${form_message}`;
 
   try {

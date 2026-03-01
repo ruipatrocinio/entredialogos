@@ -1,0 +1,29 @@
+{{ define "main"}}
+<div class="container py-5"> 
+  <div class="mx-xl-5 px-xl-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 mb-3">
+        <div class="card mx-auto p-1 p-md-4 bg-light shadow-sm border-0">
+          <div class="card-body bg-light text-center">
+            <i class="display-3 bi-check-circle text-primary mb-4 d-block"></i>
+            
+            <h1 class="mb-3 display-7">{{.Title}}</h1>
+            
+            <p class="lead text-dark mb-4">
+              {{.Params.successMessage | default "A sua mensagem foi enviada com sucesso."}}
+            </p>
+            
+            <p class="text-muted mb-5">
+              {{.Params.followUpMessage | default "Agradecemos o contacto e responderemos em breve."}}
+            </p>
+            
+            <a href="/" class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder shadow-sm">
+              {{.Params.returnButtonText | default "Voltar à Página Inicial"}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

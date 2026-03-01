@@ -47,7 +47,7 @@ Cédula OPP 29538.
   formCallToAction = "Marcação de consulta online e presencial (Montijo)"
   socialCallToAction = "Segue-me" # These are the same as in [params.social]
   [params.contacts.form]
-    formspreeLink = "https://yourformspreelink.com" #subscribe to formspree and add the link for the form here
+    formspreeLink = "/api/submit" #subscribe to formspree and add the link for the form here
     firstname = "Primeiro Nome*"
     lastname = "Último nome*"
     email = "E-mail*"

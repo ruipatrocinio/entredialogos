@@ -16,17 +16,6 @@ contentDir = "content/pt"
     ###
     preTitle = 'Psicóloga Clínica'
     title = "Filipa Tavares"
-    # You can use some markdown safely here as long as you don't include line breaks
-    intro= """
-#### Vamos dar voz ao que sentes?
-___
-
-Olá! Seja muito bem-vindo(a)!
-
-Chamo-me Filipa Tavares e sou *Psicóloga Clínica e da saúde*. 
-
-Cédula OPP 29538.
-        """
     mainButton = "Marcar consulta"
     mainButtonRef = "contacts" # Just write the name or slug of the page here
     secondButton = "Features"

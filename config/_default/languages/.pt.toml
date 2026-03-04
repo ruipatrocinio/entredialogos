@@ -1,13 +1,14 @@
 disabled = false
 languageCode = 'pt-pt'
 languageName = 'Português'
-title = 'Entre Diálogos' # This will go in the Header as well
+title = 'Entre Diálogos - Psicologia Clínica em Portugal'
 copyright = """Entre Diálogos. All rights reserved."""
 contentDir = "content/pt"
 
 
 # Change single params to "false" to remove from rendering
 [params]
+  headerTitle = "Entre Diálogos" # This goes in the header and in the site title
   subtitle = "Psicologia clínica" # This goes in the header and in the site title
   # PAGES
   [params.homepage]
@@ -98,6 +99,21 @@ contentDir = "content/pt"
     day5 = "Friday: 9am – 7pm"
     day6 = ""
     day7 = ""
+
+[params.legal]
+  # Professional Registration
+  [params.legal.registration]
+    oppCedulaProfissional = "29538" # OPP Professional License Number (Cédula Profissional)
+    ersNumber = "168258" # ERS Registration Number
+    nif = "240286606" # Tax ID (NIF)
+    address = "Portugal" # Full Professional Address
+  
+  # Legal Links
+  [params.legal.links]
+    privacyPolicy = "/privacy-policy" # Privacy Policy page
+    termsConditions = "/terms-conditions" # Terms and Conditions page
+    ral = "https://www.cniacc.pt" # Alternative Dispute Resolution (RAL) entity link
+    livroReclamacoes = "https://www.livroreclamacoes.pt" # Electronic Complaints Book link
 
 [params.footer]
   #extraDescription1 = "Straight outta Scranton city"

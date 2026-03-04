@@ -104,10 +104,7 @@ contentDir = "content/pt"
   # Professional Registration
   [params.legal.registration]
     oppCedulaProfissional = "29538" # OPP Professional License Number (Cédula Profissional)
-    ersNumber = "168258" # ERS Registration Number
-    nif = "240286606" # Tax ID (NIF)
-    address = "Portugal" # Full Professional Address
-  
+    ersNumber = "168258" # ERS Registration Number  
   # Legal Links
   [params.legal.links]
     privacyPolicy = "/privacy-policy" # Privacy Policy page

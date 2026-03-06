@@ -19,7 +19,7 @@ A **Entre Diálogos**, representada por Filipa Tavares (Psicóloga Clínica), es
 - Profissão: Psicóloga Clínica
 - Cédula Profissional OPP nº 29538
 - Registo ERS: 168258
-- NIF: 240286606
+- NIF: 246290080
 - Email: geral@entredialogos.com
 
 ### 2. Dados que Recolhemos

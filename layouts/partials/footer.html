@@ -8,7 +8,7 @@
         <ul class="list-unstyled text-muted small mb-0">
           {{ if .Site.Params.legal.registration.oppCedulaProfissional }}
             <li class="mb-2">
-              <i class="bi bi-person-badge me-2"></i><strong>Psicóloga</strong> &mdash; Cédula Profissional Ordem dos Psicólogos Portugueses nº {{ .Site.Params.legal.registration.oppCedulaProfissional }}
+              <i class="bi bi-person-badge me-2"></i>Cédula Profissional Ordem dos Psicólogos Portugueses nº {{ .Site.Params.legal.registration.oppCedulaProfissional }}
             </li>
           {{ end }}
           {{ if .Site.Params.legal.registration.ersNumber }}
@@ -21,7 +21,7 @@
       </div>
       {{ end }}
 
-      {{ if or .Site.Params.legal.links.privacyPolicy .Site.Params.legal.links.termsConditions .Site.Params.legal.links.ral .Site.Params.legal.links.livroReclamacoes }}
+      {{ if or .Site.Params.legal.links.privacyPolicy .Site.Params.legal.links.termsConditions .Site.Params.legal.links.livroReclamacoes }}
       <div class="col-12 col-md-6 col-lg-5">
         <h6 class="fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Informação Legal</h6>
         <div class="d-flex flex-column gap-2 text-muted small">
@@ -37,12 +37,8 @@
           {{ end }}
           {{ if .Site.Params.legal.links.livroReclamacoes }}
             <a href="{{ .Site.Params.legal.links.livroReclamacoes }}" class="text-muted text-decoration-none fw-semibold" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-book me-2"></i>Livro de Reclamações Eletrónico <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.75rem;"></i>
+              <i class="bi bi-book me-2"></i>Livro de Reclamações <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.75rem;"></i>
             </a>
-          {{ end }}
-          {{ if .Site.Params.legal.links.ral }}
-            <a href="{{ .Site.Params.legal.links.ral }}" class="text-muted text-decoration-none">
-              <i class="bi bi-scale me-2"></i>Centro Nacional de informação e Arbitragem de conflitos de consumo (CNIACC)</a>
           {{ end }}
         </div>
       </div>

@@ -34,7 +34,7 @@ contentDir = "content/pt"
 
 [params.contacts]
   title = "Vamos dar voz ao que sentes?"
-  formCallToAction = "Marcação de consulta online e presencial (Montijo)"
+  formCallToAction = "Marcação de consulta"
   socialCallToAction = "Segue-me" # These are the same as in [params.social]
   [params.contacts.form]
     formspreeLink = "/api/submit" #subscribe to formspree and add the link for the form here

@@ -139,17 +139,20 @@ contentDir = "content/pt"
     link = "https://www.instagram.com/p/DRVHLP2Drvg/?utm_source=website"
     img = "/images/ig-post1.jpg"
     text = "Sobre mim."
+    alt = "Imagem do post de instagram sobre a psicóloga Filipa Tavares, com texto 'Sobre mim'."
 
 [[params.instagram.cards]]
     link = "https://www.instagram.com/p/DRScF92Aohe/?utm_source=website"
     img = "/images/ig-post2.jpg"
     text = "Não é só sobre uma sessão de terapia."
+    alt = "Imagem do post de instagram sobre 'Não é só sobre uma sessão de terapia'."
 
 [[params.instagram.cards]]
     link = "https://www.instagram.com/p/DVCMXRQD8Cc/?utm_source=website"
     img = "/images/ig-post3.jpg"
     text = "Três coisas que não precisas de levar para a tua sessão de terapia."
-
+    alt = "Imagem do post de instagram sobre 'Três coisas que não precisas de levar para a tua sessão de terapia'."
+ 
 [menus]
 # PageRef should refer to the "translationKey" in `/content/<page>` frontmatter, names can be changed freely
   [[menus.main]]

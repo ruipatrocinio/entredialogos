@@ -6,4 +6,6 @@ translationKey: thanks
 draft: false
 type: 'pages'
 layout: 'thanks'
+sitemap:
+  disable: true
 ---

@@ -6,15 +6,15 @@
     <img
       class="rounded profile-img img-fluid shadow"
       src="profile.webp"
-      alt="Main image"
+      alt="Filipa Tavares - Psicóloga Clínica Entre Diálogos"
     />
   </div>
 
   <div class="col-lg-8">
     <div class="text-center text-lg-start">
-      <h2 class="display-9 fw-bolder text-primary">
+      <h1 class="display-9 fw-bolder text-primary">
         <span class="d-inline">{{ .Site.Params.homepage.title }} </span>
-      </h2>
+      </h1>
       <p class="text-justify text-lg-start lead">Eu sei o que é sentir tudo. E quando te cansas de sentir tanto, acabas por não sentir nada.
         Criei este espaço para trabalhares a ansiedade, relações e autoconhecimento de forma segura e sem pressão.</p>
       <p class="text-justify text-lg-start lead"></p>
@@ -76,7 +76,9 @@
         <div class="insta-card">
             <a href="{{ .link }}" target="_blank" rel="noopener">
                 <div class="insta-img-wrapper">
-                    <img src="{{ .img | relURL }}" alt="Instagram post" loading="lazy">
+                    <img src="{{ .img | relURL }}"
+                         alt="{{ .alt | default .text }}"
+                         loading="lazy">
                 </div>
                 <div class="insta-content">
                     <p>{{ .text }}</p>

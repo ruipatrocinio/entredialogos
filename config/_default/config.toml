@@ -6,13 +6,7 @@ defaultContentLanguage = 'pt'
 enableRobotsTXT = true
 theme = "Magnolia"
 googleAnalytics = ""
-
-# Block AI crawlers to limit traffic
-  # robots.txt from https://robotstxt.com/ai
-  # Note that enabling this might impact SEO performance, since many search engines now
-  # use LLMs that gather data with these crawlers from across the web
-[params.robots]
-  blockAIcrawlers = false
+description = "Consultas de psicologia online com a Psicóloga Filipa Tavares (OPP 29538). Espaço seguro para tratar ansiedade, relações e autoconhecimento. Marque a sua sessão."
 
 # BLOG
 # Uncomment if you want to disable all posts and tags rendering and indexing
@@ -21,8 +15,15 @@ disableKinds = ['taxonomy', 'term']
 
 # Developer area #
 
-[taxonomies]
-tag = "tags"
+#[taxonomies]
+#tag = "tags"
+
+# Block AI crawlers to limit traffic
+  # robots.txt from https://robotstxt.com/ai
+  # Note that enabling this might impact SEO performance, since many search engines now
+  # use LLMs that gather data with these crawlers from across the web
+[params.robots]
+  blockAIcrawlers = false
 
 [module]
     [[module.mounts]]

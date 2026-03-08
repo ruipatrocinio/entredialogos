@@ -53,7 +53,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{.RelPermalink}}" />
   {{end}}
 
-  {{/* SCHEMA.ORG JSON-LD FOR PSYCHOLOGISTS */}}
+{{/* SCHEMA.ORG JSON-LD FOR PSYCHOLOGISTS */}}
   {{ if .IsHome }}
   <script type="application/ld+json">
   {
@@ -61,23 +61,29 @@
     "@type": "MedicalBusiness",
     "name": "Entre Diálogos - Filipa Tavares",
     "image": "{{ $og_image }}",
-    "@id": "https://entredialogos.com",
+    "@id": "https://entredialogos.com#organization",
     "url": "https://entredialogos.com",
-    "telephone": "",
-    "priceRange": "€",
+    "telephone": "+351915004133",
+    "priceRange": "50-60€",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Almada",
       "addressCountry": "PT"
     },
-    "medicalSpecialty": "Psychotherapy",
-    "description": "Consultas de psicologia online com a psicóloga Filipa Tavares.",
+    "medicalSpecialty": ["ClinicalPsychology", "Psychotherapy"],
+    "description": "Consultas de psicologia online com a psicóloga Filipa Tavares (OPP 29538). Especialista em ansiedade, relacionamentos e autoestima.",
+    "isAcceptingNewPatients": "true",
     "founder": {
       "@type": "Person",
       "name": "Filipa Tavares",
       "jobTitle": "Psicóloga Clínica",
-      "identifier": "OPP 29538"
-    }
+      "identifier": "OPP 29538",
+      "sameAs": [
+        "https://www.linkedin.com/in/filipa-tavares-a11942281",
+        "https://www.instagram.com/filipatavares_psicologa"
+      ]
+    },
+    "knowsAbout": ["Psicoterapia", "Saúde Mental", "Psicologia Clínica"]
   }
   </script>
   {{ end }}

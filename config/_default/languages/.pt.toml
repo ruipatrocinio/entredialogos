@@ -38,12 +38,13 @@ contentDir = "content/pt"
   socialCallToAction = "Segue-me" # These are the same as in [params.social]
   [params.contacts.form]
     formspreeLink = "/api/submit" #subscribe to formspree and add the link for the form here
-    firstname = "Primeiro Nome*"
-    lastname = "Último nome*"
-    email = "E-mail*"
-    phone = "Telefone*"
-    Inquiry = "Mensagem*"
-    checkbox = "Aceito que os meus dados pessoais serão usados para agendamento de consulta"
+    firstname = "Primeiro Nome"
+    lastname = "Último nome"
+    email = "E-mail"
+    phone = "Telefone"
+    Inquiry = "Como posso ajudar?"
+    InquiryPlaceholder = "Diga-me brevemente o que o/a traz aqui ou indique a sua disponibilidade horária."
+    checkbox = "Li e aceito que os meus dados sejam tratados de acordo com a <a href='/privacy-policy'>Política de Privacidade</a>."
     submitBtn = "Submeter"
 [params.services]
   title = "Serviços"

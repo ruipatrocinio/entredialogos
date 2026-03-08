@@ -3,32 +3,48 @@ export async function onRequest(context) {
 
   // Only accept POST requests
   if (request.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 500 });
+    return new Response('Method Not Allowed', { status: 405 });
   }
 
-  // parse urlencoded body
+  // Parse urlencoded body
   const contentType = request.headers.get('content-type') || '';
   if (!contentType.includes('application/x-www-form-urlencoded')) {
-    return new Response('Unsupported Media Type', { status: 500 });
+    return new Response('Unsupported Media Type', { status: 415 });
   }
 
   const formData = await request.text();
   const params = new URLSearchParams(formData);
 
-  // honeypot spam filter: if a value is filled, bail out quietly
+  // if a value is filled, bail out quietly
   const honey = params.get('_honey');
   if (honey && honey.trim() !== '') {
     return new Response('OK', { status: 200 });
   }
 
-  const form_name = params.get('name') || '';
-  const form_lastname = params.get('surname') || '';
-  const form_email = params.get('email') || '';
-  const form_phone = params.get('phone-number') || '';
-  const form_message = params.get('message') || '';
-  const form_check_input = params.get('consent') || '';
+  // Extract form fields
+  const name = params.get('name') || '';
+  const surname = params.get('surname') || '';
+  const email = params.get('email') || '';
+  const phone = params.get('phone-number') || '';
+  const message = params.get('message') || '';
+  const consent = params.get('consent') || 'Não especificado';
 
-  // Build email payload
+  // Build a mobile-friendly email body
+  const emailBody = `
+NOVO PEDIDO DE CONTACTO - Website
+-----------------------------------------
+NOME: ${name} ${surname}
+E-MAIL: ${email}
+TELEFONE: ${phone}
+CONSENTIMENTO: ${consent}
+
+MENSAGEM:
+${message}
+-----------------------------------------
+Fim da mensagem.
+  `;
+
+  // Environment variables from Cloudflare
   const toEmail = env.TO_EMAIL;
   const fromEmail = env.FROM_EMAIL;
   const apiKey = env.RESEND_API_KEY;
@@ -36,9 +52,6 @@ export async function onRequest(context) {
   if (!apiKey || !toEmail || !fromEmail) {
     return new Response('Server misconfiguration', { status: 500 });
   }
-
-  const emailBody = `Novo pedido de consulta:\n
-Name: ${form_name} ${form_lastname}\nEmail: ${form_email}\nPhone: ${form_phone}\nChecked: ${form_check_input}\nMessage:\n${form_message}`;
 
   try {
     const resp = await fetch('https://api.resend.com/emails', {
@@ -50,7 +63,8 @@ Name: ${form_name} ${form_lastname}\nEmail: ${form_email}\nPhone: ${form_phone}\
       body: JSON.stringify({
         from: fromEmail,
         to: toEmail,
-        subject: 'PEDIDO DE CONTACTO',
+        reply_to: email,
+        subject: `Novo Contacto: ${name} ${surname}`,
         text: emailBody,
       }),
     });
@@ -60,9 +74,10 @@ Name: ${form_name} ${form_lastname}\nEmail: ${form_email}\nPhone: ${form_phone}\
       return new Response(`Failed to send email: ${errText}`, { status: 500 });
     }
 
-    // redirect to thanks page
+    // Redirect to thanks page
     const redirectUrl = new URL('/thanks', request.url).toString();
     return Response.redirect(redirectUrl, 302);
+    
   } catch (err) {
     return new Response(`Error sending email: ${err.message}`, { status: 500 });
   }

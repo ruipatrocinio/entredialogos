@@ -1,6 +1,6 @@
 ---
-title: 'Obrigada'
-description: 'A sua mensagem foi enviada com sucesso'
+title: 'Obrigada pelo seu contacto'
+description: 'Recebi a sua mensagem. Responderei no prazo máximo de dois dias úteis.'
 url: '/thanks'
 translationKey: thanks
 draft: false

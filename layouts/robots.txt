@@ -1,9 +1,25 @@
-User-agent: *
+# Block AI Crawlers (Specific)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: PerplexityBot
+User-agent: anthropic-ai
+# User-agent: Claude-Web
+# User-agent: Google-Extended
+Disallow: /
 
-{{ range .Site.Languages -}}
-Disallow: /{{ . }}/404
-{{ end -}}
+# General Search Engines (Google, Bing, etc.)
+User-agent: *
+# Specific blocked pages
 Disallow: /404.html
+Disallow: /thanks/
+{{- range .Pages -}}
+  {{- if .Params.sitemap.disable }}
+Disallow: {{ .RelPermalink }}
+  {{- end -}}
+{{- end }}
+# Explicitly allow the rest
+Allow: /
 
 Sitemap: {{ "sitemap.xml" | absURL }}
 

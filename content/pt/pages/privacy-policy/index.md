@@ -4,6 +4,8 @@ description: "Política de Privacidade e RGPD da Entre Diálogos"
 translationKey: "privacy-policy"
 slug: "privacy-policy"
 url: "/privacy-policy"
+sitemap:
+  disable: true
 ---
 
 ## Política de Privacidade

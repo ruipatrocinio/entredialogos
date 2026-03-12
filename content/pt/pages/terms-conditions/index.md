@@ -4,6 +4,8 @@ description: "Termos e Condições da Entre Diálogos - Serviços de Psicologia 
 translationKey: "terms-conditions"
 slug: "terms-conditions"
 url: "/terms-conditions"
+sitemap:
+  disable: true
 ---
 
 ## Termos e Condições

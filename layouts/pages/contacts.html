@@ -3,11 +3,10 @@
   <div class="mx-xl-5 px-xl-5">
     
     <div class="text-center mb-5">
-      {{/* H1 for SEO consistency on the contacts page */}}
       <h1 class="mb-3 display-7">{{.Site.Params.contacts.title}}</h1>
-      <p class="lead fw-light text-muted">
+      <h2 class="lead fw-light text-muted">
         {{.Site.Params.contacts.formCallToAction }}
-      </p>
+      </h2>
     </div>
 
     <div class="row justify-content-center">
@@ -31,13 +30,13 @@
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <label class="form-label small fw-bold" for="form_name">{{.Site.Params.contacts.form.firstname}}*</label>
-                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Ex: Maria" required>
+                      <input id="form_name" type="text" name="name" autocomplete="given-name" class="form-control" placeholder="Ex: Maria" required>
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <label class="form-label small fw-bold" for="form_lastname">{{.Site.Params.contacts.form.lastname}}*</label>
-                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ex: Silva" required>
+                      <input id="form_lastname" type="text" name="surname" autocomplete="family-name" class="form-control" placeholder="Ex: Silva" required>
                     </div>
                   </div>
                 </div>
@@ -45,14 +44,14 @@
                 <div class="mb-3">
                   <div class="form-group">
                     <label class="form-label small fw-bold" for="form_email">{{.Site.Params.contacts.form.email}}*</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="email@exemplo.com" required>
+                    <input id="form_email" type="email" name="email" autocomplete="email" class="form-control" placeholder="email@exemplo.com" required>
                   </div>
                 </div>
 
                 <div class="mb-3">
                   <div class="form-group">
                     <label class="form-label small fw-bold" for="form_phone">{{.Site.Params.contacts.form.phone}}*</label>
-                    <input id="form_phone" type="tel" name="phone-number" class="form-control" placeholder="9XX XXX XXX" required>
+                    <input id="form_phone" type="tel" name="phone-number" autocomplete="tel" class="form-control" placeholder="9XX XXX XXX" required>
                   </div>
                 </div>
 

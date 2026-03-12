@@ -1,8 +1,8 @@
 disabled = false
-languageCode = 'pt-pt'
+languageCode = 'pt-PT'
 languageName = 'Português'
-title = 'Entre Diálogos - Psicologia Clínica em Portugal'
-copyright = """Entre Diálogos. All rights reserved."""
+title = 'Entre Diálogos - Psicóloga Clínica online em Portugal'
+copyright = """Entre Diálogos. Todos os direitos reservados."""
 contentDir = "content/pt"
 
 
@@ -16,7 +16,7 @@ contentDir = "content/pt"
     # in individual pages frontmatters `/content/<page>`
     ###
     preTitle = 'Psicóloga Clínica'
-    title = "Filipa Tavares"
+    title = "Filipa Tavares - Psicóloga Clínica"
     mainButton = "Marcar consulta"
     mainButtonRef = "contacts" # Just write the name or slug of the page here
     secondButton = "Features"
@@ -134,7 +134,7 @@ contentDir = "content/pt"
   toc= "Indice"
 
 [params.instagram]
-    title = "Segue no Instagram"
+    title = "Conhece-me melhor"
 
 [[params.instagram.cards]]
     link = "https://www.instagram.com/p/DRVHLP2Drvg/?utm_source=website"

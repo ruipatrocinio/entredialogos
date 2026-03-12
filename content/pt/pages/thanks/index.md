@@ -8,6 +8,6 @@ type: 'pages'
 layout: 'thanks'
 sitemap:
   disable: true
-_build:
+build:
   list: never
 ---

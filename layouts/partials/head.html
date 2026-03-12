@@ -12,7 +12,7 @@
   {{/* Better Description Logic */}}
   {{- $description := .Description | default .Summary | default .Site.Params.description -}}
   <meta name="description" content="{{ $description }}" />
-
+  <link rel="canonical" href="{{ .Permalink }}" />
   <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
 
   {{/* Robots Logic */}}
@@ -54,44 +54,47 @@
   {{end}}
 
 {{/* SCHEMA.ORG JSON-LD FOR PSYCHOLOGISTS */}}
-  {{ if .IsHome }}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Dra. Filipa Tavares - Psicologia Clínica",
-    "alternateName": "Entre Diálogos",
-    "identifier": "ERS: 168258",
-    "image": "{{ $og_image }}",
-    "@id": "https://entredialogos.com#organization",
-    "url": "https://entredialogos.com",
-    "telephone": "+351915004133",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Charneca da Caparica",
-      "postalCode": "2820",
-      "addressLocality": "Almada",
-      "addressCountry": "PT"
-    },
-    "medicalSpecialty": ["ClinicalPsychology", "Psychotherapy"],
-    "description": "No projeto Entre Diálogos, a Dra. Filipa Tavares oferece consultas de psicologia clínica focadas em ansiedade, relacionamentos e aceitação. Registada na Ordem dos Psicólogos Portugueses (Cédula 29538) e na ERS (Registo 168258).",
-    "isAcceptingNewPatients": "true",
-    "founder": {
-      "@type": "Person",
-      "name": "Filipa Tavares",
-      "jobTitle": "Psicóloga Clínica",
-      "identifier": "OPP 29538",
-      "sameAs": [
-        "https://www.linkedin.com/in/filipa-tavares-a11942281",
-        "https://www.instagram.com/filipatavares_psicologa",
-        "https://www.doctoralia.com.pt/filipa-tavares"
-      ]
-    },
-    "knowsAbout": ["Psicoterapia", "Saúde Mental", "Psicologia Clínica", "Ansiedade", "Relacionamentos", "Aceitação"]
-  }
-  </script>
-  {{ end }}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Entre Diálogos",
+  "alternateName": "Dra. Filipa Tavares - Psicologia Clínica",
+  "identifier": "ERS: 168258",
+  "image": "{{ $og_image }}",
+  "@id": "https://entredialogos.com#organization",
+  "url": "https://entredialogos.com",
+  "telephone": "+351915004133",
+  "priceRange": "€€",
+  "areaServed": [
+    { "@type": "Country", "name": "Portugal" },
+    { "@type": "City", "name": "Montijo" },
+    { "@type": "City", "name": "Barreiro" },
+    { "@type": "City", "name": "Seixal" },
+    { "@type": "City", "name": "Setúbal" },
+    { "@type": "City", "name": "Sesimbra" },
+    { "@type": "City", "name": "Moita" },
+    { "@type": "City", "name": "Alcochete" }
+  ],
+  "medicalSpecialty": ["ClinicalPsychology", "Psychotherapy"],
+  "description": "No projeto Entre Diálogos, a Dra. Filipa Tavares oferece consultas de psicologia clínica online focadas em ansiedade, relacionamentos e aceitação. Registada na Ordem dos Psicólogos Portugueses (Cédula 29538) e na ERS (Registo 168258).",
+  "isAcceptingNewPatients": true,
+  "founder": {
+    "@type": "Person",
+    "name": "Filipa Tavares",
+    "jobTitle": "Psicóloga Clínica",
+    "identifier": "OPP 29538",
+    "sameAs": [
+      "https://www.linkedin.com/in/filipa-tavares-a11942281",
+      "https://www.instagram.com/filipatavares_psicologa",
+      "https://www.doctoralia.com.pt/filipa-tavares"
+    ]
+  },
+  "knowsAbout": ["Psicoterapia", "Saúde Mental", "Psicologia Clínica", "Ansiedade", "Relacionamentos", "Aceitação"]
+}
+</script>
+{{ end }}
   
   {{ template "_internal/google_analytics.html" . }}
 </head>

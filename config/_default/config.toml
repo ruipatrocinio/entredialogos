@@ -1,9 +1,10 @@
 baseURL = 'https://entredialogos.com'
-languageCode = ''
+languageCode = 'pt-PT'
 title = 'Entre Diálogos' # This can get overwritten by the single language files
 defaultContentLanguage = 'pt'
 # defaultContentLanguageInSubDir = true
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
 theme = "Magnolia"
 googleAnalytics = ""
 description = "Consultas de psicologia online com a Psicóloga Filipa Tavares (OPP 29538). Espaço seguro para tratar ansiedade, relações e autoconhecimento. Marque a sua sessão."

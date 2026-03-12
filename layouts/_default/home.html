@@ -7,6 +7,7 @@
       class="rounded profile-img img-fluid shadow"
       src="profile.webp"
       alt="Filipa Tavares - Psicóloga Clínica Entre Diálogos"
+      fetchpriority="high"
     />
   </div>
 
@@ -26,13 +27,10 @@
       <!-- button -->
       <a
         class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder shadow-sm"
-        href="{{ .Site.Params.homepage.mainButtonRef }}"
+        href="/{{ .Site.Params.homepage.mainButtonRef }}/"
         >{{ .Site.Params.homepage.mainButton }}</a>
     </div>
   </div>
-  <br />
-  <br />
-  <hr />
 </div>
 
 <!-- Description -->
@@ -40,34 +38,14 @@
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h5 class="fw-light mb-1 italic-quote">
+        <blockquote class="fw-light mb-1 italic-quote">
           "Eu não sou o que me aconteceu. Eu sou o que escolho tornar-me."
-        </h5>
+        </blockquote>
         <p class="small opacity-75 mb-0">— Carl Jung</p>
       </div>
     </div>
   </div>
 </section>
-
-<!--
-<section class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <p class="mb-4 lead text-dark text-justify">
-      Desde pequena, sempre senti uma vontade genuína de ajudar os outros.
-      
-      Acredito que esse desejo de apoiar e compreender as pessoas foi o que me guiou para a Psicologia, algo que sempre senti como o meu destino.
-      
-      A verdade é que sempre acreditei que as nossas experiências, por mais desafiantes que sejam, têm o potencial de nos transformar e de nos aproximar de quem realmente somos.
-      
-      Esta crença reflete-se não só na forma como me relaciono com os pacientes, mas também na maneira como encaro os meus próprios desafios.
-      </p>
-    </div>
-  </div>
-</section>  
--->
-
-<div class="mt-5 align-items-center">{{ .Content }}</div>
 
 <section class="instagram-section">
     <h3 class="text-primary">{{ .Site.Params.instagram.title }}</h3>
@@ -75,7 +53,7 @@
     <div class="insta-grid">
         {{ range .Site.Params.instagram.cards }}
         <div class="insta-card">
-            <a href="{{ .link }}" target="_blank" rel="noopener">
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                 <div class="insta-img-wrapper">
                     <img src="{{ .img | relURL }}"
                          alt="{{ .alt | default .text }}"

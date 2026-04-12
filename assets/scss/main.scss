@@ -1,12 +1,12 @@
-/* CUSTOM FONTS */
-@font-face {
+/* CUSTOM FONTS - Using modern system fonts for better consistency */
+/* @font-face {
   font-family: 'JosefinSans';
   src: url(../fonts/JosefinSans-VariableFont_wght.ttf) format('truetype');
 }
 @font-face {
   font-family: 'YesevaOne';
   src: url(../fonts/YesevaOne-Regular.ttf) format('truetype');
-}
+} */
 
 /* ICONS */
 @font-face {
@@ -77,11 +77,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: YesevaOne;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
 }
 
-p {
-  font-family: JosefinSans;
+p, li, .card-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
@@ -155,7 +158,7 @@ p {
 
 /* BUTTONS */
 button {
-  font-family: JosefinSans;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 /* END-BUTTONS */
 
@@ -248,7 +251,7 @@ footer {
 
 /* MISC */
 .form-group {
-  font-family: JosefinSans;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .text-justify {

@@ -11,7 +11,7 @@ description = "Consultas de psicologia online com a Psicóloga Filipa Tavares (O
 
 # BLOG
 # Uncomment if you want to disable all posts and tags rendering and indexing
-ignoreFiles= ['posts/*']
+# ignoreFiles= ['posts/*']
 disableKinds = ['taxonomy', 'term', 'RSS']
 
 # Developer area #

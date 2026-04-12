@@ -1,0 +1,45 @@
+{{- define "main" -}}
+
+<div class="row gx-5 gy-3 mb-5">
+  <div class="col-lg-4">
+    <!-- profile picture-->
+    <img
+      class="rounded profile-img img-fluid shadow"
+      src="/profile.webp"
+      alt="Filipa Tavares - Psicóloga Clínica Entre Diálogos"
+      fetchpriority="high"
+    />
+  </div>
+
+  <div class="col-lg-8">
+    <div class="text-center text-lg-start">
+      <h1 class="display-9 fw-bolder text-primary">
+        <span class="d-inline">{{ .Site.Params.homepage.title }} </span>
+      </h1>
+      {{ with .Content }}{{ . }}{{ end }}
+    </div>
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mt-3 mt-lg-5">
+      <!-- button -->
+      <a
+        class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder shadow-sm"
+        href="/{{ .Site.Params.homepage.mainButtonRef }}/"
+        >{{ .Site.Params.homepage.mainButton }}</a>
+    </div>
+  </div>
+</div>
+
+<!-- Description -->
+<section class="quote-banner text-black py-2 mb-5 shadow-sm" style="background-color: #e0dedc">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <blockquote class="fw-light mb-1 italic-quote">
+          "Eu não sou o que me aconteceu. Eu sou o que escolho tornar-me."
+        </blockquote>
+        <p class="small opacity-75 mb-0">— Carl Jung</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{- end -}}

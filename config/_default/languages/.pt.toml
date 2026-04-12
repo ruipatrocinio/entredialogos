@@ -19,8 +19,8 @@ contentDir = "content/pt"
     title = "Filipa Tavares - Psicóloga Clínica"
     mainButton = "Marcar consulta"
     mainButtonRef = "contacts" # Just write the name or slug of the page here
-    secondButton = "Features"
-    secondButtonRef = "Features" # Just write the name or slug of the page here
+    secondButton = "Saber mais"
+    secondButtonRef = "sobre" # Just write the name or slug of the page here
   # For the blog feed section (visible only if posts are rendered)
     blogTitle = "Últimos artigos"
     blogButton= "Mais artigos"

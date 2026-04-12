@@ -111,3 +111,51 @@
             top: 0;
         }
     }
+
+/* WhatsApp Floating Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsividade para telemóveis */
+@media (max-width: 576px) {
+    .whatsapp-icon {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+}

@@ -16,7 +16,9 @@
       <h1 class="display-9 fw-bolder text-primary">
         <span class="d-inline">{{ .Site.Params.homepage.title }} </span>
       </h1>
-      {{ with .Content }}{{ . }}{{ end }}
+      <div class="text-justify text-lg-start">
+        {{ with .Content }}{{ . }}{{ end }}
+      </div>
     </div>
     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mt-3 mt-lg-5">
       <!-- button -->

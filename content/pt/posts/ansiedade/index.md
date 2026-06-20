@@ -1,6 +1,6 @@
 ---
 title: "Ansiedade: Identificar, Diagnosticar e Responder Adequadamente"
-date: 2024-04-12
+date: 2026-04-12
 draft: false
 url: "/ansiedade"
 description: "Guia completo sobre a ansiedade, seus distintos quadros clínicos, diagnóstico e intervenções terapêuticas adequadas."

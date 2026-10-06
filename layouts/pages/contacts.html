@@ -24,10 +24,6 @@
               
               <input type="text" name="company-website" tabindex="-1" autocomplete="new-password" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
 
-              {{ with .Site.Params.turnstile.siteKey }}
-              <div class="cf-turnstile mb-4" data-sitekey="{{ . }}" data-action="contact"></div>
-              {{ end }}
-
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6 mb-3">
@@ -72,6 +68,12 @@
                     {{ .Site.Params.contacts.form.checkbox | safeHTML }}
                   </label>
                 </div>
+
+                {{ with .Site.Params.turnstile.siteKey }}
+                <div class="turnstile-wrapper mb-4 rounded-3 p-3 bg-white border border-light-subtle">
+                  <div class="cf-turnstile" data-sitekey="{{ . }}" data-action="contact" data-theme="light"></div>
+                </div>
+                {{ end }}
 
                 <div class="d-grid"> 
                   <button type="submit" class="btn btn-primary py-3 fw-bold shadow-sm">

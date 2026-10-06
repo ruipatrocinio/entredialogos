@@ -70,8 +70,8 @@
                 </div>
 
                 {{ with .Site.Params.turnstile.siteKey }}
-                <div class="turnstile-wrapper mb-4 rounded-3 p-3 bg-white border border-light-subtle">
-                  <div class="cf-turnstile" data-sitekey="{{ . }}" data-action="contact" data-theme="light"></div>
+                <div class="turnstile-wrapper mb-4">
+                  <div class="cf-turnstile" data-sitekey="{{ . }}" data-action="contact" data-theme="light" data-size="normal"></div>
                 </div>
                 {{ end }}
 

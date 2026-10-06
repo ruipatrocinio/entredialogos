@@ -15,10 +15,30 @@ export async function onRequest(context) {
   const formData = await request.text();
   const params = new URLSearchParams(formData);
 
-  // if a value is filled, bail out quietly
-  const honey = params.get('_honey');
+  const honey = params.get('company-website');
   if (honey && honey.trim() !== '') {
     return new Response('OK', { status: 200 });
+  }
+
+  const turnstileToken = params.get('cf-turnstile-response');
+  const turnstileSecret = env.TURNSTILE_SECRET_KEY;
+  if (!turnstileSecret || !turnstileToken) {
+    return new Response('Unable to verify submission', { status: 403 });
+  }
+
+  const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      secret: turnstileSecret,
+      response: turnstileToken,
+      remoteip: request.headers.get('CF-Connecting-IP') || undefined,
+    }),
+  });
+
+  const turnstileResult = turnstileResponse.ok ? await turnstileResponse.json() : null;
+  if (!turnstileResult?.success || turnstileResult.action !== 'contact') {
+    return new Response('Unable to verify submission', { status: 403 });
   }
 
   // Extract form fields

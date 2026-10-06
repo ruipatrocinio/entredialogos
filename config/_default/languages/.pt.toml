@@ -46,6 +46,8 @@ contentDir = "content/pt"
     InquiryPlaceholder = "Diga-me brevemente o que o/a traz aqui ou indique a sua disponibilidade horária."
     checkbox = "Li e aceito que os meus dados sejam tratados de acordo com a <a href='/privacy-policy'>Política de Privacidade</a>."
     submitBtn = "Submeter"
+[params.turnstile]
+  siteKey = "0x4AAAAAAFPxTXkeX_RIX6ez"
 [params.services]
   title = "Serviços"
   description = """ I built this theme with simplicity in mind, it is small and easily customizable, responsive, modular and multilingual. But it also leaves some space to further in-depth customization since it uses Bootstrap and SCSS.

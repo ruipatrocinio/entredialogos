@@ -22,8 +22,11 @@
             {{/* Action points to your /api/submit script */}}
             <form id="contact-form" role="form" action="{{ .Site.Params.contacts.form.formspreeLink }}" method="POST">
               
-              {{/* Anti-spam honey pot matches your script's '_honey' check */}}
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+              <input type="text" name="company-website" tabindex="-1" autocomplete="new-password" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+
+              {{ with .Site.Params.turnstile.siteKey }}
+              <div class="cf-turnstile mb-4" data-sitekey="{{ . }}" data-action="contact"></div>
+              {{ end }}
 
               <div class="controls">
                 <div class="row">
@@ -105,6 +108,10 @@
   </div>
 </div>
 
+{{ with .Site.Params.turnstile.siteKey }}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{{ end }}
+
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -119,6 +126,10 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
     try {
         const formData = new URLSearchParams(new FormData(form));
+        const turnstile = formData.get('cf-turnstile-response');
+        if (form.querySelector('.cf-turnstile') && !turnstile) {
+            throw new Error('Turnstile verification is required');
+        }
         const response = await fetch(form.action, {
             method: 'POST',
             body: formData,
